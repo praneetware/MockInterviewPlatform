@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base custom classes to match the Immersive UI design mockup */
+.bg-immersive-bg {
+  background-color: #09090b;
+}
+
+.bg-immersive-card {
+  background-color: rgba(24, 24, 27, 0.4); /* zinc-900/40 */
+}
+
+.bg-editor-bg {
+  background-color: #0d0d0f;
+}
+
+.border-immersive {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.shadow-glow-indigo {
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+}
+
+.shadow-glow-emerald {
+  box-shadow: 0 0 8px #10b981;
+}
+
+.shadow-glow-indigo-lg {
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+}
+
+/* Base scrollbar designs mapped to zinc palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(9, 9, 11, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(113, 113, 122, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(113, 113, 122, 0.5);
+}
+

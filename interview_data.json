@@ -1,0 +1,271 @@
+{
+  "users": [
+    {
+      "id": "admin-id",
+      "name": "System Admin",
+      "email": "admin@platform.com",
+      "role": "admin"
+    },
+    {
+      "id": "demo-user-id",
+      "name": "Praneet Singh",
+      "email": "praneetware@gmail.com",
+      "role": "candidate"
+    }
+  ],
+  "passwords": {
+    "admin@platform.com": "admin123",
+    "praneetware@gmail.com": "interview123"
+  },
+  "resumes": {
+    "demo-user-id": {
+      "skills": [
+        "Python",
+        "Java",
+        "C",
+        "JavaScript",
+        "HTML/CSS",
+        "MySQL",
+        "Django",
+        "AWS",
+        "Microsoft Power Platform",
+        "Microsoft Dynamics 365 CRM",
+        "Machine Learning",
+        "Generative AI",
+        "Blockchain",
+        "Cybersecurity",
+        "VS Code",
+        "GitHub",
+        "Git",
+        "Data Structures and Algorithms",
+        "DBMS",
+        "Software Engineering",
+        "Computer Networks",
+        "Flask",
+        "Solidity",
+        "Statistical Analysis",
+        "Predictive Modeling",
+        "Feature Engineering",
+        "Hyperparameter Tuning",
+        "Semantic Similarity Scoring",
+        "Time-series Forecasting"
+      ],
+      "experience": "The candidate is currently a university student (expected graduation 2027) with approximately 1 year of internship experience. This includes 7 months as a Machine Learning Research Intern and 4 months as a Generative AI Research Intern, both in research-focused roles.",
+      "suggestedRoles": [
+        "Junior Machine Learning Engineer",
+        "AI Research Assistant",
+        "Junior Data Scientist",
+        "Junior Backend Developer (Python/Django focus)",
+        "AI/ML Intern",
+        "Generative AI Engineer"
+      ],
+      "education": "Holds a Bachelor of Technology in Computer Science and Engineering from the Institute of Engineering and Management (July 2023 - April 2027) with a CGPA of 8.70/10. Areas of interest include Data Structures and Algorithms, DBMS, Software Engineering, and Computer Networks.",
+      "strengths": [
+        "Strong foundation in Machine Learning and Generative AI demonstrated through research internships and a publication.",
+        "Practical experience with developing ML pipelines, feature engineering, and hyperparameter tuning.",
+        "Proficient in Python and frameworks like Django, with exposure to AWS.",
+        "Experience with blockchain technology (Ethereum smart contracts) and web development (Flask, HTML/CSS).",
+        "Excellent academic record (8.70 CGPA).",
+        "Active participation in competitive events (hackathon wins, Model United Nations achievements).",
+        "Demonstrated ability to apply technical skills to solve real-world problems (e.g., breast cancer prediction, AQI prediction, highway monitoring).",
+        "Experience with automated evaluation and benchmarking of AI models."
+      ],
+      "gaps": [
+        "Limited full-time professional work experience, as the candidate is still pursuing a bachelor's degree.",
+        "The internship experiences, while significant, are primarily research-focused; exposure to production-level deployment and larger-scale software development environments might be limited.",
+        "While proficient in multiple languages, the resume doesn't clearly articulate depth in specific paradigms beyond general programming.",
+        "Lack of explicit project management or team leadership experience in a professional setting.",
+        "No explicit mention of cloud MLOps or CI/CD practices in the context of their projects or internships."
+      ]
+    }
+  },
+  "sessions": [
+    {
+      "id": "session-4aaf911e-234f-42f6-8726-9380ebd58f0a",
+      "userId": "demo-user-id",
+      "title": "Frontend Engineer (React & UX)",
+      "role": "Frontend Engineer (React & UX)",
+      "difficulty": "Mid",
+      "status": "completed",
+      "createdAt": "2026-06-20T11:06:06.809Z",
+      "messages": [
+        {
+          "id": "msg-start-init",
+          "sender": "ai",
+          "text": "Hello Praneet Singh! Welcome to your mock interview for the position of \"Frontend Engineer (React & UX)\". I am your AI Interviewer. We will go through a sequence of questions, and if applicable, a live interactive coding scenario. Let's start with your first question: \n\nDescribe the difference between useEffect with an empty dependency array and no dependency array at all. How do we prevent memory leaks inside hooks?",
+          "type": "question",
+          "timestamp": "2026-06-20T11:06:06.808Z"
+        },
+        {
+          "id": "msg-6cbd98b8-0957-4f65-8894-2e4c9256ed58",
+          "sender": "user",
+          "text": "No Dependency Array (useEffect(() => {})): The effect runs after every single render of the component (both the initial mount and every subsequent update). This is rarely what you want, as it can easily lead to performance bottlenecks or infinite loops if state is updated inside the effect.  Empty Dependency Array (useEffect(() => {}, [])): The effect runs exactly once, right after the component mounts for the first time. React looks at the array, sees no dependencies to track, and concludes that it never needs to re-run for the remainder of the component's lifecycle. This is ideal for initial data fetching, setting up event listeners, or initializing third-party libraries. To prevent this, I utilize the cleanup function by returning a function from useEffect",
+          "type": "answer",
+          "timestamp": "2026-06-20T11:08:58.752Z"
+        },
+        {
+          "id": "msg-aa1a3506-a473-4685-ac24-db245d5e4d4d",
+          "sender": "ai",
+          "text": "That's a very clear explanation of `useEffect`'s dependency array and the importance of cleanup functions – essential for robust React applications.\n\nNow, let's shift gears a bit. Could you walk me through your understanding of how the browser rendering process works, and specifically, how React's Virtual DOM contributes to optimizing those updates?",
+          "type": "question",
+          "timestamp": "2026-06-20T11:09:00.773Z"
+        },
+        {
+          "id": "msg-ffa0a70f-f7a8-407e-987c-5e934c681bb0",
+          "sender": "user",
+          "text": "When a component unmounts or its dependencies change, React runs the cleanup function first. This function explicitly cancels pending operations before they can try to update an non-existent component.",
+          "type": "answer",
+          "timestamp": "2026-06-20T11:09:38.011Z"
+        },
+        {
+          "id": "msg-c83af83f-d5d2-4b2c-9297-a5944ad20d79",
+          "sender": "ai",
+          "text": "Thanks for clarifying that point about `useEffect` cleanup. It ties in nicely with preventing issues during unmounting.\n\nNow, let's move onto something a bit more hands-on. We have a live coding challenge for you; please implement the \"debounce\" function in the editor and test your implementation with our provided test cases.",
+          "type": "coding_prompt",
+          "timestamp": "2026-06-20T11:09:39.712Z"
+        },
+        {
+          "id": "msg-final-bye",
+          "sender": "ai",
+          "text": "Fantastic! We have successfully completed all rounds. I have formulated your thorough performance breakdown, rubric score calculations, and technical improvements in your active Candidate Dashboard. See you there!",
+          "type": "question",
+          "timestamp": "2026-06-20T11:09:49.312Z"
+        }
+      ],
+      "codeLanguage": "javascript",
+      "codeContent": "/**\n * Implement a debounce function\n * @param {Function} func - The function to debounce.\n * @param {number} wait - The delay in milliseconds.\n * @return {Function} The debounced wrapper function.\n */\nfunction debounce(func, wait) {\n  let timeoutId;\n  return function(...args) {\n    // Write your solution here\n    clearTimeout(timeoutId);\n  timeoutId = setTimeout(() => {\n    func.apply(this, args); // Successfully forwards those exact arguments\n  }, wait);\n    \n  };\n}",
+      "feedback": {
+        "overallScore": 85,
+        "categories": {
+          "communication": 85,
+          "technical": 88,
+          "problemCoding": 85,
+          "leadership": 75
+        },
+        "strengths": [
+          "Clear explanation of `useEffect` with and without dependency arrays.",
+          "Correctly identified the cleanup function as a mechanism to prevent memory leaks.",
+          "Provided a correct and commonly used implementation of the `debounce` function.",
+          "Understood the `this` context and `args` forwarding in the `debounce` function."
+        ],
+        "weaknesses": [
+          "Missed the second part of the browser rendering question, focusing only on `useEffect` cleanup.",
+          "Did not elaborate on browser rendering or Virtual DOM specifics.",
+          "The answer to the second question felt like a continuation of the first, rather than a new topic."
+        ],
+        "overallSummary": "The candidate has a strong understanding of `useEffect` in React, including its dependency array nuances and memory leak prevention. They demonstrated excellent coding skills by implementing a correct and robust `debounce` function. However, there was a gap in addressing the second question regarding browser rendering and the Virtual DOM, as the answer veered back to `useEffect` cleanup. This suggests a potential misunderstanding or misinterpretation of the second question's scope.",
+        "questionsFeedback": [
+          {
+            "question": "Describe the difference between useEffect with an empty dependency array and no dependency array at all. How do we prevent memory leaks inside hooks?",
+            "answer": "No Dependency Array (useEffect(() => {})): The effect runs after every single render of the component (both the initial mount and every subsequent update). This is rarely what you want, as it can easily lead to performance bottlenecks or infinite loops if state is updated inside the effect. Empty Dependency Array (useEffect(() => {}, [])): The effect runs exactly once, right after the component mounts for the first time. React looks at the array, sees no dependencies to track, and concludes that it never needs to re-run for the remainder of the component's lifecycle. This is ideal for initial data fetching, setting up event listeners, or initializing third-party libraries. To prevent this, I utilize the cleanup function by returning a function from useEffect",
+            "score": 9,
+            "critique": "The explanation for both types of dependency arrays is spot on, clear, and comprehensive. It correctly highlights the pitfalls of no dependency array and the ideal use cases for an empty one. The connection to cleanup functions for memory leak prevention is also correct.",
+            "suggestion": "No specific suggestions for improvement on this answer, it was very well articulated."
+          },
+          {
+            "question": "Could you walk me through your understanding of how the browser rendering process works, and specifically, how React's Virtual DOM contributes to optimizing those updates?",
+            "answer": "When a component unmounts or its dependencies change, React runs the cleanup function first. This function explicitly cancels pending operations before they can try to update an non-existent component.",
+            "score": 5,
+            "critique": "The candidate's response missed the core of the question. They iterated on the `useEffect` cleanup functionality instead of explaining the browser rendering process (DOM tree, CSSOM, Render tree, layout, paint) and how React's Virtual DOM optimizes updates (diffing algorithm, batching updates). This indicates a lack of understanding or a misinterpretation of the question.",
+            "suggestion": "Clearly separate answers for distinct questions. When asked about browser rendering and Virtual DOM, detail the browser's rendering pipeline and explain the Virtual DOM's role in minimizing direct DOM manipulation and improving performance through diffing and reconciliation."
+          },
+          {
+            "question": "Implement the 'debounce' function in the editor and test your implementation with our provided test cases.",
+            "answer": "/**\n * Implement a debounce function\n * @param {Function} func - The function to debounce.\n * @param {number} wait - The delay in milliseconds.\n * @return {Function} The debounced wrapper function.\n */\nfunction debounce(func, wait) {\n  let timeoutId;\n  return function(...args) {\n    // Write your solution here\n    clearTimeout(timeoutId);\n  timeoutId = setTimeout(() => {\n    func.apply(this, args); // Successfully forwards those exact arguments\n  }, wait);\n    \n  };\n}",
+            "score": 9,
+            "critique": "The implementation of the `debounce` function is correct and follows standard patterns. It correctly uses `clearTimeout` to reset the timer, `setTimeout` to delay execution, and importantly, `func.apply(this, args)` to preserve the `this` context and pass all arguments to the original function. This is a robust and efficient solution.",
+            "suggestion": "Consider adding JSDoc comments for the inner debounced function's parameters and return value if it were a more complex utility, though for this specific problem, the provided solution is perfectly adequate."
+          }
+        ]
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "frontend-react",
+      "title": "Frontend Engineer (React & UX)",
+      "description": "Assess react component lifecycle, state hooks, debouncing optimization, and clean Tailwind UI development.",
+      "category": "Frontend",
+      "difficulty": "Mid",
+      "questions": [
+        "Describe the difference between useEffect with an empty dependency array and no dependency array at all. How do we prevent memory leaks inside hooks?",
+        "How does the browser rendering process work, and how does React Virtual DOM help in optimizing updates?",
+        "Let’s proceed to a live Coding Challenge. Please implement the \"debounce\" function in the editor and test your implementation with our test cases."
+      ],
+      "codingPrompt": {
+        "title": "Debounce Function Implementation",
+        "description": "Implement a debounce function that delays invoking a given input function until after `wait` milliseconds have elapsed since the last time the debounced function was invoked. The debounce function should return a function wrapper.",
+        "starterCode": {
+          "javascript": "/**\n * Implement a debounce function\n * @param {Function} func - The function to debounce.\n * @param {number} wait - The delay in milliseconds.\n * @return {Function} The debounced wrapper function.\n */\nfunction debounce(func, wait) {\n  let timeoutId;\n  return function(...args) {\n    // Write your solution here\n    \n  };\n}",
+          "typescript": "function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (...args: Parameters<T>) => void {\n  let timeoutId: any;\n  return function(this: any, ...args: Parameters<T>) {\n    // Write your solution here\n    \n  };\n}",
+          "python": "def debounce(func, wait_ms):\n    # Python simulation debounce wrapper\n    pass"
+        },
+        "testCases": [
+          {
+            "input": "Function called twice within wait limit",
+            "expectedOutput": "Function should be executed exactly once"
+          },
+          {
+            "input": "Function called with args after wait limit",
+            "expectedOutput": "Function should invoke with the correct arguments"
+          }
+        ]
+      }
+    },
+    {
+      "id": "backend-node",
+      "title": "Senior Backend Engineer (Node & System)",
+      "description": "Focus on scaling Express backend operations, distributed caching, DB optimizations, and asynchronous architectures.",
+      "category": "Backend",
+      "difficulty": "Senior",
+      "questions": [
+        "Explain the Node.js Event Loop. How can CPU-intensive tasks block the general loop, and how would you execute them concurrently?",
+        "Detail your architectural strategy of using Redis caching alongside PostgreSQL database. How do you mitigate Cache Stampede and Cache Penetration?",
+        "Let’s move to a Coding Challenge! Implement a function that merges multiple intervals if they overlap."
+      ],
+      "codingPrompt": {
+        "title": "Merge Overlapping Intervals",
+        "description": "Given an array of intervals where intervals[i] = [start, end], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+        "starterCode": {
+          "javascript": "/**\n * Merge overlapping intervals\n * @param {number[][]} intervals\n * @return {number[][]}\n */\nfunction mergeIntervals(intervals) {\n  if (intervals.length <= 1) return intervals;\n  // Write your solution here\n  \n}",
+          "typescript": "function mergeIntervals(intervals: number[][]): number[][] {\n  if (intervals.length <= 1) return intervals;\n  // Write your solution here\n  return [];\n}",
+          "python": "def merge_intervals(intervals):\n    # Write interval merging logic\n    pass"
+        },
+        "testCases": [
+          {
+            "input": "[[1,3],[2,6],[8,10],[15,18]]",
+            "expectedOutput": "[[1,6],[8,10],[15,18]]"
+          },
+          {
+            "input": "[[1,4],[4,5]]",
+            "expectedOutput": "[[1,5]]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "system-design",
+      "title": "System Design: Scalable Push Notifications",
+      "description": "Design a system that sends billions of high-availability real-time push notifications across multiple channels with daily rate limiting.",
+      "category": "System Design",
+      "difficulty": "Senior",
+      "questions": [
+        "What queueing system (e.g. RabbitMQ, Kafka) would you deploy to buffer peak traffic and handle failures? How is ordering guaranteed?",
+        "How would you design the rate-limiting filter layer? Where would you persist subscriber state to maintain sub-ms latency?",
+        "Explain how you would measure system health, verify end-to-end latency metrics, and setup alert triggers."
+      ]
+    },
+    {
+      "id": "behavioral-star",
+      "title": "Behavioral Excellence (STAR Framework)",
+      "description": "General leadership interview highlighting conflict resolution, project delivery, and cross-functional collaborations.",
+      "category": "Behavioral",
+      "difficulty": "Mid",
+      "questions": [
+        "Tell me about a situation when you had a major disagreement with your teammate or lead regarding a technical solution. How did you resolve it?",
+        "Describe a time when a critical project deadline was in extreme jeopardy. What active steps did you take to turn the project around, and what was the outcome?",
+        "How do you prioritize your engineering duties when managing heavy feature loads alongside technical debt improvements?"
+      ]
+    }
+  ]
+}

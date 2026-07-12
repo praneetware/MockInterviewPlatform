@@ -1,0 +1,6 @@
+{
+  "name": "AI Mock Interview Platform",
+  "description": "An immersive AI-powered mock interview platform with JWT authentication, resume parsing, interactive coding workspace, web video simulation, and comprehensive analytics.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
